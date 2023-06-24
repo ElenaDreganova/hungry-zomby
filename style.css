@@ -1,0 +1,128 @@
+
+/* Игрок */
+.player {
+    height: 200px;
+    position: absolute;
+    top: calc(50% - 100px);
+    left: calc(50% - 100px);
+
+    /*top: calc(50% - 225px);
+    left: 60px;*/
+    
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s; /*плавность*/
+}
+
+.player.view {
+	width: 59px;
+	height: 110px;
+	outline: 0px solid red;
+}
+
+
+/* Враги */
+.enemy,
+.food {
+    position: absolute;
+    top: calc(70% - 85px);
+    right: 20px;
+    /*z-index: 999999;*/
+    transition: all 0.2s; /*плавность*/
+    outline: 0px solid red;
+}
+
+.enemy.type-1 {
+	width: 110px;
+	height: 150px;
+	/*background: black;*/
+}
+
+
+/* Взрыв */
+.boom {
+    background: url(img/boom.gif);
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    z-index: 9999;
+    top: 40%;
+    left: 50%;
+}
+
+
+/* Еда */
+.food.good,
+.food.bad {
+    width: 35px;
+    height: 35px;
+}
+
+.food.bad {
+	
+}
+
+/*Звук muted*/
+.muted {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    background: url("img/muted_off_clear.png");
+    background-size: cover;
+}
+
+/* === блок жизней === */
+#lifes {
+    position: absolute;
+    top: 5px;
+    left: 20px;
+}
+/* сердечки */
+#lifes span {
+    display: block;
+    margin: 10px;
+    float: left;
+    width: 42px;
+    height: 40px;
+    background: url(img/enemy/cherep.png);
+    background-size: cover;
+}
+
+/* === блок енергии === */
+.energy {
+    position: absolute;
+    top: 30px;
+    left: 35%;
+}
+
+.energy span {
+    display: block;
+    margin: 2px;
+    float: left;
+    width: 105px;
+    height: 40px;
+    float: right;
+    background-size: cover;
+}
+
+/* === шкала енергии === */
+
+/*зеленая шкала*/
+.energy .green {
+    background: url(images/green-sk.png);
+    background-position-y: bottom;
+}
+
+/*желтая шкала*/
+.energy .yellow {
+    background: url(images/yellow-sk.png);
+}
+
+/*красная шкала*/
+.energy .red {
+    background: url(images/red-sk.png);
+}
+

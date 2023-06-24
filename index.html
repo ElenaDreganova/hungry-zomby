@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Зомби</title>
+	<link rel="stylesheet" type="text/css" href="styleV_hungry.css">
+	<!-- <link rel="stylesheet" type="text/css" href="styleV_hungry.css"> -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<!-- <link rel="stylesheet" type="text/css" href="styles/styleV.css">
+	<link rel="stylesheet" type="text/css" href="styles/style.css"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<div class="wrapper">
+	<div id="video-bg" style="display: block;">
+	     <video width="100%" height="auto" preload="auto" autoplay="true" loop="true" muted="muted" poster="images/fon.png">
+	         <source src="images/bg.mp4" type="video/mp4"></source>
+	         <source src="images/bg.webm" type="video/webm"></source>
+	     </video>
+	 </div>
+
+	<div id="app">
+		<div id="game" style="display: none;">
+			
+			<div id="video-fon">
+				<video width="100%" height="auto" preload="auto" autoplay="true" loop="true" muted="muted" poster="images/city_fon.png">
+				    <source src="images/bg_city.mp4" type="video/mp4"></source>
+				    <source src="images/bg_city.webm" type="video/webm"></source>
+			    </video>
+			</div>
+
+			<div class="player view"></div>
+			<!-- <div class="score">0</div>
+			<div class="zomiCounter">0</div>
+			<div class="gamerLives">3</div> -->
+
+			<div id="lifes"></div>	
+
+			<div class="energy"></div>
+		</div>
+
+		<div id="area">🅷🆄🅽🅶🆁🆈 🆉🅾🅼🅱🅸🅴🆂</div>
+
+ 	    <div id="start">
+
+		 	
+
+		    <div id="select-player" class="clearfix">
+				<span class="selected" id="skin1">
+					<img src="images/igrok1.png">
+				</span>
+					
+				<span class="selected" id="skin2">
+					<img src="images/igrok2.png">
+				</span>
+			</div>
+
+			<button>Start</button>
+	    </div>
+
+	     <div id="end" style = "display: none;">
+	    	
+	    	<button>Restart</button>		
+		</div>
+
+		<div id="end2" style="display: none;">
+	    	
+	    	<button>Restart</button>
+	    </div>
+	</div>    
+
+	<script src="script.js"></script>
+	<script src="myLib.js"></script>
+	<script src="globalVars.js"></script>
+	
+	<script src="scriptV.js"></script>
+
+	<script src="soundL.js"></script>
+	<script src="soundLGlobalVars.js"></script>
+	
+	<!-- <script src="scripts/script.js"></script>
+	<script src="scripts/scriptV.js"></script>
+	<script src="scripts/soundL.js"></script>
+	<script src="scripts/myLib.js"></script> -->
+	<div>
+	</body>
+</html>

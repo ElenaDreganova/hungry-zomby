@@ -1,0 +1,320 @@
+/* === Видео для заднего фона в начале игры ===*/
+#video-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -1;
+    background: url(images/fon.png) no-repeat #384657;
+    background-size: cover;
+}
+
+#video-bg > video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    width: auto;
+    height: auto; 
+}
+
+@supports (object-fit: cover) {
+    #video-bg > video {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+/* === Видео для заднего фона в игровом процессе ===*/
+#video-fon {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -1;
+    background: url(images/fon.png) no-repeat #384657;
+    background-size: cover;
+}
+
+#video-fon > video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    width: auto;
+    height: auto; 
+}
+
+
+/* === Игра === */
+#app {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 9;
+    display: block;
+}
+
+
+
+
+/*=== окно стартового блока === */
+#start {
+    background-image: url("images/bg.jpg");
+    width: 600px;
+    height: 500px;
+    background-color: lightyellow;
+    text-align: center;
+    border-radius: 40px;
+    font-size: 25px;
+    font-family: cursive;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: context-menu;
+    text-align: center;
+    margin: 15px auto;
+    font-size: 40px;
+    color: #fff;
+    text-shadow: 0 0 20px #fefcc9, 10px -10px 30px #feec85, -20px -20px 40px #ffae34, 20px -40px 50px #ec760c,
+     -20px -60px 60px #cd4606, 0 -80px 70px #973716, 10px -90px 80px #451b0e;
+     /*display: block;*/
+}
+
+
+/* === окно выбора игрока1 === */
+#start #select-player #skin1 {
+    border-radius: 10px;
+    display: block;
+    float: left;
+    padding: 9px;
+    cursor: pointer;
+    /*border: 4px solid #326184;*/
+    margin-left: 40px;
+    margin-top: 75px;
+}
+
+
+/* === окно выбора игрока2 === */
+#start #select-player #skin2 {
+    border-radius: 10px;
+    display: block;
+    float: right;
+    padding: 9px;
+    cursor: pointer;
+    /*border: 4px solid #326184;*/
+    margin-right: 40px;
+    margin-top: 75px;
+}
+
+
+
+
+
+/* === фон выбора игрока1 при нажатии === */
+#start #select-player #skin1:hover {
+  background: rgb(255,255,0);
+    background: rgb(255 0 111 / 38%);
+}
+
+
+/* === фон выбора игрока2 при нажатии === */
+#start #select-player #skin2:hover {
+    background: rgb(255,255,0);
+    background: rgb(255 0 111 / 38%);
+}
+/* ===фон при нажатии ===*/
+
+#start #select-player span.selected {
+    border: 8px solid #326184;
+    background: rgb(255,255,0);
+    background: rgb(0 255 75 / 38%);
+}
+
+/* === кнопка старт === */
+#start button {
+    padding: -13px 60px;
+    font-size: 45px;
+    font-family: arial black;
+    background: #a02525;
+    border-radius: 20px;
+    border: 4px solid #336184;
+    cursor: pointer;
+    margin: 40px;
+    outline: none;
+    color: #FFF;
+    text-transform: uppercase;
+}
+
+
+/* === фон кнопки старт при нажатии === */
+#start button:hover{
+    background: forestgreen;
+}
+
+
+
+/*===
+Вспомогательные классы ????
+===*/
+.clearfix {
+    zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+
+
+
+
+
+
+/*/////////////////////////////// блок вы выиграли//////////////////////////*/
+#end2 {
+    background-image: url("images/winner.png");
+    width: 550px;
+    height: 550px;
+    /*background-color: lightyellow;*/
+    border-radius: 40px;
+    font-size: 25px;
+    font-family: cursive;
+    margin-left: 400px;
+    margin-right: auto;
+    cursor: context-menu;
+    text-align: center;
+    margin: 2px auto;
+    font-size: 40px;
+    color: #fff;
+    opacity: 0.8;
+    /*margin-left: 455px;*/
+}
+/*///////////////////////////// кнопка рестарт блок вы выиграли///////////////////*/
+#end2 button {
+    padding: -13px 60px;
+    font-size: 45px;
+    font-family: arial black;
+    border-radius: 20px;
+    border: 4px solid #336184;
+    cursor: pointer;
+    margin-top: 520px;
+    outline: none;
+    color: #FFF;
+    text-transform: uppercase;
+    margin-left: 50px;
+    background: #a02525;
+    background: linear-gradient(#e0290d, #531414);
+}
+
+
+/*////////////////////// задний фон кнопка рестарт блок вы выиграли//////////////*/
+#end2 button:hover{
+    background: forestgreen;
+    background: linear-gradient(#531414, #e0290d);
+}
+
+
+/*/////////////////////////////// блок вы проиграли//////////////////////////*/
+
+#end {
+    background-image: url("images/you_loose.png");
+    width: 600px;
+    height: 500px;
+    /*background-color: lightyellow;*/
+    border-radius: 40px;
+    font-size: 25px;
+    font-family: cursive;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: context-menu;
+    text-align: center;
+    margin: 80px auto;
+    font-size: 40px;
+    color: #fff;
+}
+
+/*/////////////////////// кнопка рестарт ////////////////////////////////////////*/
+#end button {
+    padding: -13px 60px;
+    font-size: 45px;
+    font-family: arial black;
+    border-radius: 20px;
+    border: 4px solid #336184;
+    cursor: pointer;
+    margin-top: 480px;
+    outline: none;
+    color: #FFF;
+    text-transform: uppercase;
+    background: #a02525;
+    background: linear-gradient(darkred, black);
+        
+}
+
+
+
+/* /////////////////////=== фон кнопки restart при нажатии ===///////////////////////////// */
+#end button:hover{
+    background: forestgreen;
+    background: linear-gradient(black, darkred);
+}
+
+
+
+/*////////////////////////// Голодные зомби анимация мигание ///////////////////////////////////////////*/
+body {
+ background: #111;
+ font-family: "Open Sans",  Impact;
+}
+
+#area {
+  text-align: center;
+  font-size: 80px;
+  color: #d90f0f;
+  letter-spacing: 7px;
+  font-weight: 700;
+  text-transform: uppercase;
+  animation: blur 2.5s ease-out infinite;
+  text-shadow: 0px 0px 5px #1fbc31, 0px 0px 7px #fff;
+}
+
+@keyframes blur {
+  from {
+    text-shadow:0px 0px 10px #fff,
+      0px 0px 10px #44e44c, 
+      0px 0px 25px #44e44c,
+      0px 0px 25px #44e44c,
+      0px 0px 25px #44e44c,
+      0px 0px 25px #44e44c,
+      0px 0px 25px #44e44c,
+      0px 0px 25px #fff,
+      0px 0px 50px #fff,
+      0px 0px 50px #fff,
+      0px 0px 50px #7B96B8,
+      0px 0px 150px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px -10px 100px #7B96B8,
+      0px -10px 100px #7B96B8;
+  }
+}
+
+
